@@ -14,7 +14,7 @@ except:
 
 ## Get confgiruation
 config = SafeConfigParser()
-config.read('azure.conf')
+config.read('/etc/azureconf/azure.conf')
 
 mailadmin = config.get('common', 'mailadmin')
 passwordadmin = config.get('common', 'passwordadmin')
