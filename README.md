@@ -12,6 +12,7 @@ Test
  - git clone https://github.com/sfonteneau/send_password_in_azure.git
  - mv send_password_in_azure /opt/sync-azure
  - mkdir /etc/azureconf/
+ - cd /opt/sync-azure
  - cp -f azure.conf /etc/azureconf/
  - Configure /etc/azureconf/azure.conf
 
