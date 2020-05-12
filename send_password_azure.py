@@ -3,17 +3,19 @@ import sys
 from azure.common.credentials import UserPassCredentials
 from azure.graphrbac import GraphRbacManagementClient
 from azure.graphrbac.models import PasswordProfile, UserUpdateParameters
-from ConfigParser import SafeConfigParser
+import configparser
+import base64
 
-login = sys.argv[1]
-newpassword = sys.argv[2].decode('base64')
+newpassword = base64.b64decode(sys.argv[2]).decode('utf-8')
+
 try:
-    mail = sys.argv[3]
+    mail = sys.argv[1]
 except:
     mail = ''
 
-## Get confgiruation
-config = SafeConfigParser()
+## Get configuration
+
+config = configparser.ConfigParser()
 config.read('/etc/azureconf/azure.conf')
 
 mailadmin = config.get('common', 'mailadmin')
