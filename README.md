@@ -18,4 +18,4 @@ Test
 
 You can try like this:
 
-python /opt/sync-azure/send_password_azure.py username@exemple.com cGFzc3dvcmQ=\n
+python3 /opt/sync-azure/send_password_azure.py username@exemple.com cGFzc3dvcmQ=\n
